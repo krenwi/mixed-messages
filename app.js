@@ -1,11 +1,12 @@
-//Data for mixed messages to be randomised from: 12 13 12
+//Data for mixed messages to be randomised from:
 
-const earthTimeUnit = ['first light', 'sunrise', 'music', 'training', 'ablutions', 'noon', 'libations', 'prayer', 'leasure', 'endings', 'sunset', 'evening']
-const sunTimeUnit = ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scoropius', 'Ophiuchus', 'Sagittarius']
-const moonTimeUnit = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const timeUnits = {
+  earthTimeUnit: ['first light', 'sunrise', 'music', 'training', 'ablutions', 'noon', 'libations', 'prayer', 'leasure', 'endings', 'sunset', 'evening']
+  sunTimeUnit: ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scoropius', 'Ophiuchus', 'Sagittarius']
+  moonTimeUnit: ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+}
 
-
-//Factory function
+//Randomiser function
 const randIndex = (timeUnit) => {
   return Math.floor(Math.random() * (timeUnit.length))
 }
