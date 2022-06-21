@@ -4,9 +4,14 @@ const earthTimeUnit = ['first light', 'sunrise', 'music', 'training', 'ablutions
 const moonTimeUnit = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const sunTimeUnit = ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scoropius', 'Ophiuchus', 'Sagittarius']
 
+//Factory function
+const randIndex = (timeUnit) => {
+  console.log(timeUnit.length - 1)
+  return Math.floor(Math.random() * (timeUnit.length - 1))
+}
+
 const timeGenerator = () => {
-  let rand = Math.floor(Math.random() * 13)
-  console.log(`The hour of the day is ${earthTimeUnit[rand]}.\nWhile the sun is in the constellation ${sunTimeUnit[rand]}.\nAnd the moon is ${moonTimeUnit[rand]}.`)
+  console.log(`The hour of the day is ${earthTimeUnit[randIndex(earthTimeUnit)]}.\nWhile the sun is in the constellation ${sunTimeUnit[randIndex(sunTimeUnit)]}.\nAnd the moon is ${moonTimeUnit[randIndex(moonTimeUnit)]}.`)
 }
 
 timeGenerator()
